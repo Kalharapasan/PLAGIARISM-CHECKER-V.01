@@ -125,6 +125,11 @@ class SimplePlagiarismChecker:
                 }
                 results['matches'].append(match_info)
         if results['matches']:
+            total_weight = sum(m['similarity'] for m in results['matches'])
+            weighted_sum = sum(m['similarity'] ** 2 for m in results['matches'])
+            results['overall_similarity'] = round(
+                weighted_sum / total_weight if total_weight > 0 else 0, 2
+            )
 
 
 
