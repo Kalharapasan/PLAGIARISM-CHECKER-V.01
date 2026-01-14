@@ -9,4 +9,12 @@ import difflib
 import math
 
 class SimplePlagiarismChecker:
+    def __init__(self):
+        self.min_match_length = 5  
+    
+
+
+
+if __name__ == "__main__":
+    main()
     
