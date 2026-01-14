@@ -282,6 +282,13 @@ def create_sample_database() -> List[Dict]:
             Understanding and following academic integrity principles is crucial for success.'''
         }
     ]
+    
+def main():
+    print("=" * 70)
+    print("PLAGIARISM CHECKER - Standalone Version")
+    print("Advanced Document Analysis (No External Dependencies)")
+    print("=" * 70)
+    print()
 
 
 
