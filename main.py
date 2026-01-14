@@ -130,6 +130,9 @@ class SimplePlagiarismChecker:
             results['overall_similarity'] = round(
                 weighted_sum / total_weight if total_weight > 0 else 0, 2
             )
+        results['matches'].sort(key=lambda x: x['similarity'], reverse=True)
+        
+        return results
 
 
 
