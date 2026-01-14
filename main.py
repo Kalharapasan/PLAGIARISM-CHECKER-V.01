@@ -140,6 +140,20 @@ class SimplePlagiarismChecker:
         report.append("PLAGIARISM DETECTION REPORT")
         report.append("=" * 70)
         report.append("")
+        report.append("SUMMARY")
+        report.append("-" * 70)
+        report.append(f"Overall Similarity Score: {results['overall_similarity']}%")
+        report.append(f"Total Words Analyzed: {results['total_words']}")
+        report.append(f"Number of Sources Matched: {len(results['matches'])}")
+        
+        matched_words = sum(
+            sum(seq['length'] for seq in match['matched_sequences'])
+            for match in results['matches']
+        )
+        report.append(f"Total Matched Words: {matched_words}")
+        unique_percent = max(0, 100 - results['overall_similarity'])
+        report.append(f"Unique Content: {unique_percent:.2f}%")
+        report.append("")
 
 
 
