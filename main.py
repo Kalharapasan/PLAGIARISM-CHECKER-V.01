@@ -99,6 +99,15 @@ class SimplePlagiarismChecker:
                 })
         
         return matches
+    
+    def check_against_database(self, text: str, database_texts: List[Dict]) -> Dict:
+        results = {
+            'overall_similarity': 0,
+            'total_words': len(self.tokenize(text)),
+            'matches': []
+        }
+        
+        text_clean = self.preprocess_text(text)
 
 
 
