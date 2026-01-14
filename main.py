@@ -108,6 +108,13 @@ class SimplePlagiarismChecker:
         }
         
         text_clean = self.preprocess_text(text)
+        
+        for doc in database_texts:
+            doc_text = doc.get('text', '')
+            doc_clean = self.preprocess_text(doc_text)
+            jaccard = self.calculate_jaccard_similarity(text_clean, doc_clean)
+            cosine = self.calculate_cosine_similarity(text_clean, doc_clean)
+            similarity = (jaccard + cosine) / 2
 
 
 
