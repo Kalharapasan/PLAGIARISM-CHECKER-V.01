@@ -170,6 +170,62 @@ class SimplePlagiarismChecker:
             report.append("  The document shows substantial overlap with existing sources.")
             report.append("  Significant revision may be needed for academic integrity.")
         report.append("")
+        if results['matches']:
+            report.append("DETAILED MATCH ANALYSIS")
+            report.append("-" * 70)
+            
+            for idx, match in enumerate(results['matches'], 1):
+                report.append(f"\nMatch #{idx}")
+                report.append(f"Source: {match['source']}")
+                if match['url']:
+                    report.append(f"URL: {match['url']}")
+                report.append(f"Similarity: {match['similarity']}%")
+                report.append(f"Number of matched sequences: {len(match['matched_sequences'])}")
+                
+                if match['matched_sequences']:
+                    report.append("\nTop Matched Sequences:")
+                    for seq_idx, seq in enumerate(match['matched_sequences'][:3], 1):
+                        truncated = seq['text'][:80] + '...' if len(seq['text']) > 80 else seq['text']
+                        report.append(f"\n  Sequence {seq_idx} ({seq['length']} words):")
+                        report.append(f"  \"{truncated}\"")
+                
+                report.append("\n" + "-" * 70)
+        else:
+            report.append("DETAILED MATCH ANALYSIS")
+            report.append("-" * 70)
+            report.append("\nNo significant matches found.")
+            report.append("The document appears to be largely original content.")
+        
+        report.append("")
+        report.append("RECOMMENDATIONS")
+        report.append("-" * 70)
+        if results['overall_similarity'] < 15:
+            report.append("• Document is acceptable for submission")
+            report.append("• Continue maintaining good citation practices")
+        elif results['overall_similarity'] < 30:
+            report.append("• Review highlighted matches for proper citation")
+            report.append("• Consider paraphrasing matched sections")
+            report.append("• Ensure all quotes are properly attributed")
+        else:
+            report.append("• Significant revision recommended before submission")
+            report.append("• Review all matched sections carefully")
+            report.append("• Ensure proper citation for all borrowed content")
+            report.append("• Consider rewriting highly similar sections in your own words")
+        
+        report.append("")
+        report.append("=" * 70)
+        report.append("Note: This is an automated analysis. Human review is recommended.")
+        report.append("Always verify results and maintain academic integrity standards.")
+        report.append("=" * 70)
+        
+        report_text = '\n'.join(report)
+        
+        if output_file:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(report_text)
+            print(f"\nReport saved to: {output_file}")
+        
+        return report_text
 
 
 
