@@ -307,6 +307,7 @@ def main():
         print("Error: Only .txt files are supported in standalone version.")
         print("For DOCX and PDF support, use the full version with dependencies.")
         return
+    checker = SimplePlagiarismChecker()
 
 
 
