@@ -302,6 +302,11 @@ def main():
     if not os.path.exists(filepath):
         print(f"Error: File not found: {filepath}")
         return
+    
+    if not filepath.lower().endswith('.txt'):
+        print("Error: Only .txt files are supported in standalone version.")
+        print("For DOCX and PDF support, use the full version with dependencies.")
+        return
 
 
 
