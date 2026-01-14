@@ -65,6 +65,7 @@ class SimplePlagiarismChecker:
         words2 = self.tokenize(text2)
         freq1 = Counter(words1)
         freq2 = Counter(words2)
+        all_words = set(freq1.keys()).union(set(freq2.keys()))
 
 
 
