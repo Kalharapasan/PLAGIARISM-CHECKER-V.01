@@ -308,6 +308,16 @@ def main():
         print("For DOCX and PDF support, use the full version with dependencies.")
         return
     checker = SimplePlagiarismChecker()
+    print(f"Processing: {filepath}")
+    print("Extracting text...")
+    
+    try:
+        text = checker.extract_text_from_txt(filepath)
+        print(f"✓ Text extracted successfully ({len(text)} characters)")
+        print(f"✓ Word count: {len(checker.tokenize(text))} words")
+    except Exception as e:
+        print(f"✗ Error: {e}")
+        return
 
 
 
