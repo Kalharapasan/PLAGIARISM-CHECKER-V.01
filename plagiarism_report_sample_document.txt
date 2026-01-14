@@ -1,0 +1,106 @@
+======================================================================
+PLAGIARISM DETECTION REPORT
+======================================================================
+
+SUMMARY
+----------------------------------------------------------------------
+Overall Similarity Score: 51.37%
+Total Words Analyzed: 281
+Number of Sources Matched: 5
+Total Matched Words: 242
+Unique Content: 48.63%
+
+INTERPRETATION
+----------------------------------------------------------------------
+✗ HIGH SIMILARITY - Significant concern
+  The document shows substantial overlap with existing sources.
+  Significant revision may be needed for academic integrity.
+
+DETAILED MATCH ANALYSIS
+----------------------------------------------------------------------
+
+Match #1
+Source: Wikipedia - Academic Integrity
+URL: https://en.wikipedia.org/wiki/Academic_integrity
+Similarity: 57.27%
+Number of matched sequences: 2
+
+Top Matched Sequences:
+
+  Sequence 1 (34 words):
+  "academic integrity is the moral code or ethical policy of academia it includes v..."
+
+  Sequence 2 (21 words):
+  "because it ensures that students and researchers are held to high ethical standa..."
+
+----------------------------------------------------------------------
+
+Match #2
+Source: Research Ethics Handbook
+URL: https://example.com/ethics
+Similarity: 51.6%
+Number of matched sequences: 2
+
+Top Matched Sequences:
+
+  Sequence 1 (48 words):
+  "original research demonstrates critical thinking and deep understanding of the s..."
+
+  Sequence 2 (6 words):
+  "separates excellent students from average ones"
+
+----------------------------------------------------------------------
+
+Match #3
+Source: University Writing Guide
+URL: https://example.com/writing-guide
+Similarity: 50.37%
+Number of matched sequences: 1
+
+Top Matched Sequences:
+
+  Sequence 1 (46 words):
+  "when students use someone else s ideas or words they must give credit to the ori..."
+
+----------------------------------------------------------------------
+
+Match #4
+Source: Academic Standards Guide
+URL: https://example.com/standards
+Similarity: 48.89%
+Number of matched sequences: 1
+
+Top Matched Sequences:
+
+  Sequence 1 (55 words):
+  "teachers and professors take academic integrity seriously because it ensures tha..."
+
+----------------------------------------------------------------------
+
+Match #5
+Source: Educational Research Journal
+URL: https://example.com/research/plagiarism
+Similarity: 47.64%
+Number of matched sequences: 2
+
+Top Matched Sequences:
+
+  Sequence 1 (19 words):
+  "plagiarism is the representation of another author s language thoughts ideas or ..."
+
+  Sequence 2 (13 words):
+  "in educational contexts there are differing definitions of plagiarism depending ..."
+
+----------------------------------------------------------------------
+
+RECOMMENDATIONS
+----------------------------------------------------------------------
+• Significant revision recommended before submission
+• Review all matched sections carefully
+• Ensure proper citation for all borrowed content
+• Consider rewriting highly similar sections in your own words
+
+======================================================================
+Note: This is an automated analysis. Human review is recommended.
+Always verify results and maintain academic integrity standards.
+======================================================================

@@ -1,0 +1,108 @@
+======================================================================
+PLAGIARISM DETECTION REPORT
+======================================================================
+
+SUMMARY
+----------------------------------------------------------------------
+Overall Similarity Score: 26.56%
+Total Words Analyzed: 333
+Number of Sources Matched: 5
+Total Matched Words: 100
+Unique Content: 73.44%
+
+INTERPRETATION
+----------------------------------------------------------------------
+⚠ MODERATE SIMILARITY - Review recommended
+  The document shows moderate overlap with existing sources.
+  Check matches to ensure proper citation and paraphrasing.
+
+DETAILED MATCH ANALYSIS
+----------------------------------------------------------------------
+
+Match #1
+Source: Educational Research Journal
+URL: https://example.com/research/plagiarism
+Similarity: 30.81%
+Number of matched sequences: 2
+
+Top Matched Sequences:
+
+  Sequence 1 (12 words):
+  "plagiarism is the representation of another author s language thoughts ideas or"
+
+  Sequence 2 (10 words):
+  "in educational contexts there are differing definitions of plagiarism depending"
+
+----------------------------------------------------------------------
+
+Match #2
+Source: Wikipedia - Academic Integrity
+URL: https://en.wikipedia.org/wiki/Academic_integrity
+Similarity: 30.64%
+Number of matched sequences: 3
+
+Top Matched Sequences:
+
+  Sequence 1 (13 words):
+  "academic integrity is the moral code or ethical policy of academia it includes"
+
+  Sequence 2 (12 words):
+  "because it ensures that students and researchers are held to high ethical"
+
+  Sequence 3 (10 words):
+  "in educational contexts there are differing definitions of plagiarism depending"
+
+----------------------------------------------------------------------
+
+Match #3
+Source: University Writing Guide
+URL: https://example.com/writing-guide
+Similarity: 25.99%
+Number of matched sequences: 1
+
+Top Matched Sequences:
+
+  Sequence 1 (15 words):
+  "when students use someone else s ideas or words they must give credit to the"
+
+----------------------------------------------------------------------
+
+Match #4
+Source: Academic Standards Guide
+URL: https://example.com/standards
+Similarity: 21.04%
+Number of matched sequences: 1
+
+Top Matched Sequences:
+
+  Sequence 1 (12 words):
+  "because it ensures that students and researchers are held to high ethical"
+
+----------------------------------------------------------------------
+
+Match #5
+Source: Research Ethics Handbook
+URL: https://example.com/ethics
+Similarity: 20.44%
+Number of matched sequences: 2
+
+Top Matched Sequences:
+
+  Sequence 1 (10 words):
+  "original research demonstrates critical thinking and deep understanding of the"
+
+  Sequence 2 (6 words):
+  "separates excellent students from average ones"
+
+----------------------------------------------------------------------
+
+RECOMMENDATIONS
+----------------------------------------------------------------------
+• Review highlighted matches for proper citation
+• Consider paraphrasing matched sections
+• Ensure all quotes are properly attributed
+
+======================================================================
+Note: This is an automated analysis. Human review is recommended.
+Always verify results and maintain academic integrity standards.
+======================================================================
