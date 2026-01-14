@@ -41,6 +41,12 @@ class SimplePlagiarismChecker:
         sentences = re.split(r'[.!?]+\s+', text)
         return [s.strip() for s in sentences if s.strip()]
     
+    def get_ngrams(self, words: List[str], n: int = 3) -> List[str]:
+        filtered_words = [w for w in words if w not in self.stop_words]
+        ngrams = []
+        for i in range(len(filtered_words) - n + 1):
+            ngrams.append(' '.join(filtered_words[i:i+n]))
+        return ngrams
 
 
 
