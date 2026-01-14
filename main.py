@@ -69,6 +69,13 @@ class SimplePlagiarismChecker:
         vec1 = [freq1.get(word, 0) for word in all_words]
         vec2 = [freq2.get(word, 0) for word in all_words]
         dot_product = sum(v1 * v2 for v1, v2 in zip(vec1, vec2))
+        magnitude1 = math.sqrt(sum(v ** 2 for v in vec1))
+        magnitude2 = math.sqrt(sum(v ** 2 for v in vec2))
+        
+        if magnitude1 == 0 or magnitude2 == 0:
+            return 0.0
+        
+        return (dot_product / (magnitude1 * magnitude2)) * 100
 
 
 
