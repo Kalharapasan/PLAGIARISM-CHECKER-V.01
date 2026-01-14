@@ -63,6 +63,8 @@ class SimplePlagiarismChecker:
     def calculate_cosine_similarity(self, text1: str, text2: str) -> float:
         words1 = self.tokenize(text1)
         words2 = self.tokenize(text2)
+        freq1 = Counter(words1)
+        freq2 = Counter(words2)
 
 
 
