@@ -226,6 +226,62 @@ class SimplePlagiarismChecker:
             print(f"\nReport saved to: {output_file}")
         
         return report_text
+    
+
+def create_sample_database() -> List[Dict]:
+    return [
+        {
+            'source': 'Wikipedia - Academic Integrity',
+            'url': 'https://en.wikipedia.org/wiki/Academic_integrity',
+            'text': '''Academic integrity is the moral code or ethical policy of academia. 
+            It includes values such as avoidance of cheating or plagiarism, maintenance of 
+            academic standards, and honesty and rigor in research and academic publishing. 
+            Academic integrity is important because it ensures that students and researchers 
+            are held to high ethical standards and that their work is trustworthy and credible.
+            In educational contexts, there are differing definitions of plagiarism depending 
+            on the institution. However, the core principle remains the same: giving proper 
+            credit to original sources.'''
+        },
+        {
+            'source': 'Educational Research Journal',
+            'url': 'https://example.com/research/plagiarism',
+            'text': '''Plagiarism is the representation of another author's language, thoughts, 
+            ideas, or expressions as one's own original work. In educational contexts, there are 
+            differing definitions of plagiarism depending on the institution. Plagiarism is 
+            considered a violation of academic integrity and can have significant consequences.
+            Students must understand that proper attribution is essential. When you use someone 
+            else's ideas or words, you must give credit to the original source.'''
+        },
+        {
+            'source': 'University Writing Guide',
+            'url': 'https://example.com/writing-guide',
+            'text': '''Proper citation is essential in academic writing. When students use someone 
+            else's ideas or words, they must give credit to the original source. This includes 
+            direct quotes, paraphrased material, and even ideas that influenced their thinking. 
+            Failure to cite sources properly is considered plagiarism and violates academic 
+            integrity policies at most institutions. Teachers and professors take this seriously.'''
+        },
+        {
+            'source': 'Research Ethics Handbook',
+            'url': 'https://example.com/ethics',
+            'text': '''Original research demonstrates critical thinking and deep understanding 
+            of the subject matter. Students should strive to develop their own ideas and 
+            arguments, supported by proper research and citation. The ability to synthesize 
+            information from multiple sources and create something new is a key skill in 
+            higher education. This separates excellent students from average ones. Academic 
+            excellence requires both knowledge and integrity.'''
+        },
+        {
+            'source': 'Academic Standards Guide',
+            'url': 'https://example.com/standards',
+            'text': '''Teachers and professors take academic integrity seriously because it 
+            ensures that students and researchers are held to high ethical standards and that 
+            their work is trustworthy and credible. When students maintain academic integrity, 
+            they develop skills that will serve them throughout their professional careers. 
+            These skills include critical thinking, research competency, and ethical decision-making.
+            Understanding and following academic integrity principles is crucial for success.'''
+        }
+    ]
 
 
 
