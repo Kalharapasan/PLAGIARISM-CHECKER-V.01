@@ -289,6 +289,19 @@ def main():
     print("Advanced Document Analysis (No External Dependencies)")
     print("=" * 70)
     print()
+    if len(sys.argv) < 2:
+        print("Usage: python main.py <file_path>")
+        print("\nSupported format: .txt")
+        print("\nExample:")
+        print("  python main.py document.txt")
+        print("\nNote: For DOCX and PDF support, use the full version with dependencies.")
+        return
+    
+    filepath = sys.argv[1]
+    
+    if not os.path.exists(filepath):
+        print(f"Error: File not found: {filepath}")
+        return
 
 
 
