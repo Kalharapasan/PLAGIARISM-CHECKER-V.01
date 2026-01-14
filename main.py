@@ -115,6 +115,15 @@ class SimplePlagiarismChecker:
             jaccard = self.calculate_jaccard_similarity(text_clean, doc_clean)
             cosine = self.calculate_cosine_similarity(text_clean, doc_clean)
             similarity = (jaccard + cosine) / 2
+            if similarity > 5: 
+                common_sequences = self.find_common_sequences(text_clean, doc_clean)
+                match_info = {
+                    'source': doc.get('source', 'Unknown'),
+                    'url': doc.get('url', ''),
+                    'similarity': round(similarity, 2),
+                    'matched_sequences': common_sequences[:5]  
+                }
+                results['matches'].append(match_info)
 
 
 
