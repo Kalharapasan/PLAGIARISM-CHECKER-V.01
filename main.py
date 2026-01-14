@@ -318,6 +318,9 @@ def main():
     except Exception as e:
         print(f"✗ Error: {e}")
         return
+    print("\nLoading reference database...")
+    database = create_sample_database()
+    print(f"✓ {len(database)} reference documents loaded")
 
 
 
