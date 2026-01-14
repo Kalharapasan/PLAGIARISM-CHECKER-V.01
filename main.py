@@ -154,6 +154,22 @@ class SimplePlagiarismChecker:
         unique_percent = max(0, 100 - results['overall_similarity'])
         report.append(f"Unique Content: {unique_percent:.2f}%")
         report.append("")
+        report.append("INTERPRETATION")
+        report.append("-" * 70)
+        score = results['overall_similarity']
+        if score < 15:
+            report.append("✓ LOW SIMILARITY - Acceptable level for academic work")
+            report.append("  The document shows minimal overlap with existing sources.")
+            report.append("  This is generally acceptable for submission.")
+        elif score < 30:
+            report.append("⚠ MODERATE SIMILARITY - Review recommended")
+            report.append("  The document shows moderate overlap with existing sources.")
+            report.append("  Check matches to ensure proper citation and paraphrasing.")
+        else:
+            report.append("✗ HIGH SIMILARITY - Significant concern")
+            report.append("  The document shows substantial overlap with existing sources.")
+            report.append("  Significant revision may be needed for academic integrity.")
+        report.append("")
 
 
 
