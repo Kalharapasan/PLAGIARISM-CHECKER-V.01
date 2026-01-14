@@ -7,3 +7,6 @@ from typing import List, Dict, Set
 from collections import Counter
 import difflib
 import math
+
+class SimplePlagiarismChecker:
+    
