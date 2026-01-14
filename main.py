@@ -124,6 +124,7 @@ class SimplePlagiarismChecker:
                     'matched_sequences': common_sequences[:5]  
                 }
                 results['matches'].append(match_info)
+        if results['matches']:
 
 
 
