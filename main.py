@@ -33,6 +33,8 @@ class SimplePlagiarismChecker:
         words = re.findall(r'\b[a-z0-9]+\b', text.lower())
         return words
     
+    def preprocess_text(self, text: str) -> str:
+    
 
 
 
