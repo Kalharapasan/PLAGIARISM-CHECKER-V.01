@@ -29,6 +29,10 @@ class SimplePlagiarismChecker:
         except Exception as e:
             raise Exception(f"Error reading TXT file: {e}")
     
+    def tokenize(self, text: str) -> List[str]:
+        words = re.findall(r'\b[a-z0-9]+\b', text.lower())
+        return words
+    
 
 
 
