@@ -353,8 +353,5 @@ def main():
     
     print(f"\n💾 Detailed report saved to: {output_filename}")
 
-
-
 if __name__ == "__main__":
     main()
-    
