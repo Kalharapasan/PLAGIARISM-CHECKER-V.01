@@ -329,6 +329,13 @@ def main():
     results = checker.check_against_database(text, database)
     
     print("✓ Analysis complete!")
+    output_filename = f"plagiarism_report_{Path(filepath).stem}.txt"
+    report = checker.generate_report(results, output_filename)
+    
+    print("\n" + report)
+    print("\n" + "=" * 70)
+    score = results['overall_similarity']
+    print(f"OVERALL SIMILARITY: {score}%")
 
 
 
