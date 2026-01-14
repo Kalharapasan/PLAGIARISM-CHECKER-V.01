@@ -76,6 +76,29 @@ class SimplePlagiarismChecker:
             return 0.0
         
         return (dot_product / (magnitude1 * magnitude2)) * 100
+    
+    def find_common_sequences(self, text1: str, text2: str) -> List[Dict]:
+        words1 = self.tokenize(text1)
+        words2 = self.tokenize(text2)
+        
+        matcher = difflib.SequenceMatcher(None, words1, words2)
+        matches = []
+        
+        for match in matcher.get_matching_blocks():
+            if match.size >= self.min_match_length:
+                matched_text = ' '.join(words1[match.a:match.a + match.size])
+                start = max(0, match.a - 20)
+                end = min(len(words1), match.a + match.size + 20)
+                context = ' '.join(words1[start:end])
+                
+                matches.append({
+                    'text': matched_text,
+                    'context': context,
+                    'length': match.size,
+                    'position': match.a
+                })
+        
+        return matches
 
 
 
