@@ -133,6 +133,13 @@ class SimplePlagiarismChecker:
         results['matches'].sort(key=lambda x: x['similarity'], reverse=True)
         
         return results
+    
+    def generate_report(self, results: Dict, output_file: str = None) -> str:
+        report = []
+        report.append("=" * 70)
+        report.append("PLAGIARISM DETECTION REPORT")
+        report.append("=" * 70)
+        report.append("")
 
 
 
