@@ -336,6 +336,22 @@ def main():
     print("\n" + "=" * 70)
     score = results['overall_similarity']
     print(f"OVERALL SIMILARITY: {score}%")
+    bar_length = 50
+    filled = int((score / 100) * bar_length)
+    bar = '█' * filled + '░' * (bar_length - filled)
+    
+    if score < 15:
+        color = "🟢 GREEN - ACCEPTABLE"
+    elif score < 30:
+        color = "🟡 YELLOW - REVIEW NEEDED"
+    else:
+        color = "🔴 RED - SIGNIFICANT CONCERN"
+    
+    print(f"[{bar}]")
+    print(f"Status: {color}")
+    print("=" * 70)
+    
+    print(f"\n💾 Detailed report saved to: {output_filename}")
 
 
 
