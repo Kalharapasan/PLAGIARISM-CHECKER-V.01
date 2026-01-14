@@ -37,6 +37,8 @@ class SimplePlagiarismChecker:
         text = re.sub(r'\s+', ' ', text)
         return text.strip()
     
+    def get_sentences(self, text: str) -> List[str]:
+    
 
 
 
