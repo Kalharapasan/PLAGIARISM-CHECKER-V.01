@@ -34,6 +34,8 @@ class SimplePlagiarismChecker:
         return words
     
     def preprocess_text(self, text: str) -> str:
+        text = re.sub(r'\s+', ' ', text)
+        return text.strip()
     
 
 
