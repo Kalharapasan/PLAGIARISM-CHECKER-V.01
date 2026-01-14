@@ -22,6 +22,13 @@ class SimplePlagiarismChecker:
             'very', 's', 't', 'just', 'now'
         }
     
+    def extract_text_from_txt(self, filepath: str) -> str:
+        try:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+                return f.read()
+        except Exception as e:
+            raise Exception(f"Error reading TXT file: {e}")
+    
 
 
 
