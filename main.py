@@ -59,6 +59,10 @@ class SimplePlagiarismChecker:
         union = len(words1.union(words2))
         
         return (intersection / union) * 100 if union > 0 else 0.0
+    
+    def calculate_cosine_similarity(self, text1: str, text2: str) -> float:
+        words1 = self.tokenize(text1)
+        words2 = self.tokenize(text2)
 
 
 
