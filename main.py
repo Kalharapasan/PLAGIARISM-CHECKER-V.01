@@ -321,6 +321,14 @@ def main():
     print("\nLoading reference database...")
     database = create_sample_database()
     print(f"✓ {len(database)} reference documents loaded")
+    print("\nAnalyzing document for similarity...")
+    print("• Calculating word frequencies...")
+    print("• Comparing with reference sources...")
+    print("• Identifying matching sequences...")
+    
+    results = checker.check_against_database(text, database)
+    
+    print("✓ Analysis complete!")
 
 
 
