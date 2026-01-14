@@ -273,7 +273,7 @@ Project/
 - [ ] Similarity visualization
 - [ ] Export to multiple formats (PDF, DOCX, HTML)
 
-## 📄 License
+## 📄 [License](./LICENSE.md): Proprietary – Permission Required
 
 This tool is for educational purposes. Ensure you have the right to analyze any documents you check.
 
